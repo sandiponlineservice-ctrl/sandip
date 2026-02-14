@@ -1,0 +1,139 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, Segoe UI, Roboto, sans-serif;
+  --bg: #f6f8fc;
+  --card: #ffffff;
+  --accent: #3163ff;
+  --text: #1a1f36;
+  --muted: #667085;
+  --ok: #0f9d58;
+  --no: #d93025;
+  --border: #d8dfeb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header,
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+header p {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.filters,
+.summary {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.95rem;
+}
+
+.lead-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.lead-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgb(16 24 40 / 0.06);
+}
+
+.lead-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.business-name {
+  margin: 0;
+}
+
+.size-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background: #e9efff;
+  color: #294ec9;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+}
+
+.meta {
+  color: var(--muted);
+  margin: 0.3rem 0 0.6rem;
+}
+
+.description {
+  margin-top: 0;
+}
+
+.presence {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.platform {
+  border-top: 1px dashed var(--border);
+  padding-top: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.platform strong {
+  display: inline-block;
+  min-width: 88px;
+}
+
+.yes {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.no {
+  color: var(--no);
+  font-weight: 600;
+}
