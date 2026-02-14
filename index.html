@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeadGen Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>LeadGen Finder</h1>
+      <p>
+        Find businesses that match your ideal client profile and quickly audit
+        their website + social channels.
+      </p>
+    </header>
+
+    <main>
+      <section class="filters">
+        <h2>Filter Options</h2>
+        <div class="filter-grid">
+          <label>
+            Target Industry
+            <select id="industryFilter">
+              <option value="all">All</option>
+            </select>
+          </label>
+
+          <label>
+            City
+            <input type="text" id="cityFilter" placeholder="e.g., London" />
+          </label>
+
+          <label>
+            Country
+            <input type="text" id="countryFilter" placeholder="e.g., UK" />
+          </label>
+
+          <label>
+            Business Age
+            <select id="ageFilter">
+              <option value="all">Any</option>
+              <option value="new">0-3 years</option>
+              <option value="growing">4-10 years</option>
+              <option value="established">11+ years</option>
+            </select>
+          </label>
+
+          <label>
+            Business Size
+            <select id="sizeFilter">
+              <option value="all">Any</option>
+              <option value="small">Small/Local</option>
+              <option value="famous">Famous/Brand</option>
+            </select>
+          </label>
+
+          <label>
+            Has Website
+            <select id="websiteFilter">
+              <option value="all">Any</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </label>
+
+          <label>
+            Active on Social
+            <select id="activityFilter">
+              <option value="all">Any</option>
+              <option value="consistent">Consistent</option>
+              <option value="inconsistent">Inconsistent</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="summary">
+        <h2>Lead Results</h2>
+        <p id="resultCount">0 businesses found</p>
+      </section>
+
+      <section id="leadContainer" class="lead-grid" aria-live="polite"></section>
+    </main>
+
+    <template id="leadTemplate">
+      <article class="lead-card">
+        <div class="lead-header">
+          <h3 class="business-name"></h3>
+          <span class="size-badge"></span>
+        </div>
+
+        <p class="meta"></p>
+        <p class="description"></p>
+
+        <div class="presence"></div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
